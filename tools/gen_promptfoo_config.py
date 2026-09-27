@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 从 payloads.jsonl 生成 promptfoo 回归测试配置。
-输出: E:\规划\career-plan\C1\tools\promptfooconfig.json
+输出: tools/promptfooconfig.json（脚本同目录）
 规则: 4 个行为级命中载体 x 5 次重复 = 20 个测试用例，断言 = 命中特征词
 """
 import json, os
 
-SRC = r'E:\规划\career-plan\C1\payloads\payloads.jsonl'
-OUT_DIR = r'E:\规划\career-plan\C1\tools'
+BASE = os.path.dirname(os.path.abspath(__file__))
+SRC = os.path.join(BASE, '..', 'payloads', 'payloads.jsonl')
+OUT_DIR = BASE
 REPEATS = 5
 MODEL = 'qwen2.5:7b-instruct-q4_K_M'
 
