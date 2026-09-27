@@ -9,6 +9,17 @@ Thumbs.db
 results.json
 exports/
 
+# fire.py 运行产物（证据含模型输出原文，不入仓库）
+evidence/
+04-原始证据/
+
+# 本地工作流文件（私人笔记与归档，不入仓库）
+99-归档/
+payload-defense-*.txt
+payload.txt
+*台账*
+0[0-5]-*.md
+
 # Python
 __pycache__/
 *.pyc
